@@ -145,7 +145,7 @@ export function px2viewport(options = {}) {
 
   const exclude = options.exclude
     ? Array.isArray(options.exclude) ? options.exclude : [options.exclude]
-    : [/node_modules\/(?!(?:.*\/)?vant\/)/]
+    : []
 
   const filter = createFilter(
     options.include ?? [/\.vue/, /\.[jt]sx?$/, /\.m[jt]sx?$/],
