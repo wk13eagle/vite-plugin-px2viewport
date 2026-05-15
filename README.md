@@ -30,7 +30,7 @@ export default defineConfig({
 | `unitToConvert` | `string` | `'px'` | 待转换单位 |
 | `viewportUnit` | `string` | `'vw'` | 目标单位 |
 | `unitPrecision` | `number` | `5` | vw 值小数位数 |
-| `minPixelValue` | `number` | 无 | 小于该值的 px 不转换 |
+| `minPixelValue` | `number` | `1` | 小于该值的 px 不转换 |
 | `include` | `FilterPattern` | `/\.vue/, /\.[jt]sx?$/, /\.m[jt]sx?$/` | 匹配转换的文件 |
 | `exclude` | `FilterPattern` | `-` | 排除的文件，例：`/node_modules\/(?!(?:.*\/)?vant\/)/` 表示排除 node_modules 保留 Vant |
 

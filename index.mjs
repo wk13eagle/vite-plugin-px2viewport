@@ -96,7 +96,7 @@ function createPostCSSPlugin(options) {
   const unitPrecision = options.unitPrecision ?? 5
   const unitToConvert = options.unitToConvert ?? 'px'
   const viewportUnit = options.viewportUnit ?? 'vw'
-  const minPixelValue = options.minPixelValue
+  const minPixelValue = options.minPixelValue ?? 1
 
   const pxRE = new RegExp(`(-?\\d+(?:\\.\\d+)?)${unitToConvert}`, 'g')
   const postCSSFilter = options.exclude
@@ -143,7 +143,7 @@ export function px2viewport(options = {}) {
     unitToConvert: options.unitToConvert ?? 'px',
     unitPrecision: options.unitPrecision ?? 5,
     viewportUnit: options.viewportUnit ?? 'vw',
-    minPixelValue: options.minPixelValue,
+    minPixelValue: options.minPixelValue ?? 1,
     viewportWidth: options.viewportWidth ?? 750
   }
 
