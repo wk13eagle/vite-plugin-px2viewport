@@ -99,12 +99,16 @@ function createPostCSSPlugin(options) {
   const minPixelValue = options.minPixelValue
 
   const pxRE = new RegExp(`(-?\\d+(?:\\.\\d+)?)${unitToConvert}`, 'g')
+  const postCSSFilter = options.exclude
+    ? createFilter(void 0, Array.isArray(options.exclude) ? options.exclude : [options.exclude])
+    : null
 
   const factory = function() {
     return {
       postcssPlugin: 'px-to-viewport',
       OnceExit(root, { result }) {
         const filePath = result?.opts?.from ?? ''
+        if (postCSSFilter && !postCSSFilter(filePath)) return
         let vw = 750
         if (typeof viewportWidth === 'function') {
           vw = viewportWidth(filePath) ?? 750
