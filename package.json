@@ -1,0 +1,53 @@
+{
+  "name": "@lazy-koala/vite-plugin-px2viewport",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Vite plugin that converts px units to vw for mobile viewport adaptation, supporting CSS, Vue SFC inline styles.",
+  "main": "./index.mjs",
+  "exports": {
+    ".": {
+      "import": "./index.mjs"
+    },
+    "./runtime": {
+      "import": "./runtime.mjs"
+    }
+  },
+  "files": [
+    "index.mjs",
+    "index.d.mts",
+    "runtime.mjs",
+    "runtime.d.mts"
+  ],
+  "keywords": [
+    "vite",
+    "plugin",
+    "px2viewport",
+    "px-to-viewport",
+    "vw",
+    "mobile",
+    "adaptation",
+    "vue"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wk13eagle/vite-plugin-px2viewport.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wk13eagle/vite-plugin-px2viewport/issues"
+  },
+  "homepage": "https://github.com/wk13eagle/vite-plugin-px2viewport#readme",
+  "devDependencies": {
+    "vite": "^7.3.0",
+    "vue": "^3.5.0"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.29.0",
+    "@babel/traverse": "^7.29.0",
+    "magic-string-ast": "^2.0.0"
+  },
+  "peerDependencies": {
+    "vite": ">=5",
+    "vue": ">=3"
+  }
+}
